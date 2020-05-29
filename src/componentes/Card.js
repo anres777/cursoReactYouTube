@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Card extends Component {
+class Card extends React.Component {
     render() {
         return (
             <div>
@@ -9,3 +9,5 @@ export default class Card extends Component {
         )
     }
 }
+
+export default Card
