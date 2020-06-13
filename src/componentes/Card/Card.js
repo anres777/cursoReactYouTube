@@ -10,8 +10,25 @@ import './Card.css'
 class Card extends React.Component {
     constructor(props) {
         //Siempre se debe de llamar al constructor padre super para utilizar prop
-        super(props);        
+        super(props);
+        this.state = {
+            image:'./../../images/exercise.png'
+        };        
     }
+
+    componentDidMount(){
+        setTimeout(
+            ()=>{
+                this.setState(
+                    {
+                        image: './../../images/add.png'
+                    }
+                )
+            },
+            5000
+        );
+    }
+
     render() {
         //Esta lina crea varias constates con los valors pasados para evitar escribir "this.props" a cada rato
         const { title, description, img, leftColor, rightColor}  = this.props
@@ -21,7 +38,7 @@ class Card extends React.Component {
                 <div className="card-body">
                     <div className="row center">
                         <div className="col-6">
-                            <img src={img}/>
+                            <img src={this.state.image}/>
                         </div>
                         <div className="col-6 Fitness-Card-Info">
                             <h1>{title}</h1>
