@@ -9,29 +9,30 @@ import './Card.css'
 
 class Card extends React.Component {
     constructor(props) {
-        super(props)
-        //Siempre se debe de llamar al constructor padre super para utilizar props
+        //Siempre se debe de llamar al constructor padre super para utilizar prop
+        super(props);        
     }
     render() {
+        //Esta lina crea varias constates con los valors pasados para evitar escribir "this.props" a cada rato
+        const { title, description, img, leftColor, rightColor}  = this.props
+        console.log(title)
         return (
             <div className="card mx-auto Fitness-Card">
                 <div className="card-body">
                     <div className="row center">
                         <div className="col-6">
-                            <img src={this.props.urlImagen} className="float-right "/>
+                            <img src={img}/>
                         </div>
                         <div className="col-6 Fitness-Card-Info">
-                            <h1>Guias Tecnicas</h1>
-                            <p>Aprende lo basico de ejercicios de calentamiento muscular.</p>
+                            <h1>{title}</h1>
+                            <p>{description}</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </div>            
         )
     }
 }
-
 
 
 export default Card

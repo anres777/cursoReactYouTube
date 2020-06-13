@@ -7,7 +7,14 @@ import Card from './componentes/Card/Card';
 const contenedor = document.getElementById("root")
 
 //ReactDom recibe dos parametros uno es elemento a renderizar y el otro es el contenedor donde se renderizara
-ReactDOM.render(<Card urlImagen="images/exercise.png" />, contenedor)
+ReactDOM.render(<Card 
+                    title="Guias Tecnicas"
+                    description="Aprende lo basico de ejercicios de calentamiento muscular."
+                    img="images/exercise.png"
+                    leftColor=""
+                    rightColor=""
+                />
+                , contenedor)
 
 
 
