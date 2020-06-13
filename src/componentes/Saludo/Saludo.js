@@ -1,4 +1,6 @@
 import React from 'react'
+import './Saludo.css'
+
 
 export default function Saludo(props) {
     return (
