@@ -15,7 +15,7 @@ class Card extends React.Component {
             image:'./../../images/exercise.png'
         };        
     }
-
+    
     componentDidMount(){
         setTimeout(
             ()=>{
