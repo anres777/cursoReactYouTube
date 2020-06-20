@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from '../componentes/Card/Card';
 import Saludo from '../componentes/Saludo/Saludo';
+import BotonNew from '../componentes/BotonNew/BotonNew'
 
 export default class Ejercicios extends Component {
     constructor(props){
@@ -52,7 +53,8 @@ export default class Ejercicios extends Component {
                             )
                         }
                     )
-                }                
+                }
+                <BotonNew/>                
             </div>
         )
     }
